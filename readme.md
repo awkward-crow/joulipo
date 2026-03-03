@@ -2,6 +2,10 @@
 
 Inspired by the book "Exercises in Programming Style" by Cristina Videira Lopes and based on her [github repo](https://github.com/crista/exercises-in-programming-style).
 
+## next steps
+
+ - add Project.toml
+ - get lsp working
 
 ## refinements
 
