@@ -4,6 +4,7 @@ Inspired by the book "Exercises in Programming Style" by Cristina Videira Lopes 
 
 ## latest
 
+ - tidy up persistent tables, move juliadb implementation into its own directory
  - add thread based implementation in data spaces style alongside task based implementation
  - use symbols rather than strings as keys in messages and dictionaries e.g. closed-maps, bulletin-board
  - add Project.toml
@@ -11,7 +12,7 @@ Inspired by the book "Exercises in Programming Style" by Cristina Videira Lopes 
 
 ## next steps
 
- - ??
+ - handling of utf-8 in golf, dataspaces and infinite mirror
 
 ## usage
 
@@ -22,7 +23,7 @@ cd golf
 julia --project=@. -i tf.jl
 ```
 
-The flag `--project=@.` will search upwards from teh current directory for `Project.toml` or similar.
+The flag `--project=@.` will search upwards from the current directory for `Project.toml` or similar.
 
 ## activate project
 
