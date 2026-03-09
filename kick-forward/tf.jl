@@ -51,8 +51,6 @@ function no_op(func)
     return
 end
 
-path_to_file = "../pride-and-prejudice.txt"
-
 read_file(ARGS[1], filter_chars)
 
 
