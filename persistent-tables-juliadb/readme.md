@@ -1,4 +1,4 @@
-# persistent tables
+# persistent tables -- juliadb
 
 ## on running `tf-b.jl`
 

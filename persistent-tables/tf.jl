@@ -1,4 +1,4 @@
-#! /bin/env julia
+#! /bin/env -S julia --project=@.
 
 
 ## usage
