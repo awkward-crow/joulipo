@@ -1,0 +1,25 @@
+title:
+  text: joulipo
+  fg: 0x2a1408
+  font: georgia
+  style: italic
+  size: xlarge
+
+short:
+  text: programming styles in Julia
+  fg: 0x5a3d20
+  font: georgia
+  style: normal
+  size: small
+
+image:
+  path: ./bg.webp
+  size: cover
+  position: center
+
+theme: light
+
+description:
+  text: ./description.md
+  fg: 0x2a1408
+  bg: 0xf5f0e8
