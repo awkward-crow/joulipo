@@ -1,5 +1,7 @@
 # joulipo
 
+[![ci](https://github.com/awkward-crow/joulipo/actions/workflows/ci.yml/badge.svg)](https://github.com/awkward-crow/joulipo/actions/workflows/ci.yml)
+
 Julia implementations of the programming styles described in *Exercises in Programming Style* by Cristina Videira Lopes ([source](https://github.com/crista/exercises-in-programming-style)).
 
 Each subdirectory contains a self-contained implementation of the term-frequency problem in a distinct style.
