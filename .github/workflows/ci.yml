@@ -1,0 +1,82 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: julia-actions/setup-julia@v2
+        with:
+          version: '1'
+
+      - uses: julia-actions/cache@v2
+
+      - name: instantiate
+        run: julia --project=@. -e 'using Pkg; Pkg.instantiate()'
+
+      - name: pipeline
+        run: julia tf.jl ../pride-and-prejudice.txt
+        working-directory: pipeline
+
+      - name: things
+        run: julia tf.jl ../pride-and-prejudice.txt
+        working-directory: things
+
+      - name: kick-forward
+        run: julia tf.jl ../pride-and-prejudice.txt
+        working-directory: kick-forward
+
+      - name: the-one
+        run: julia tf.jl ../pride-and-prejudice.txt
+        working-directory: the-one
+
+      - name: quarantine
+        run: julia tf.jl ../pride-and-prejudice.txt
+        working-directory: quarantine
+
+      - name: infinite-mirror
+        run: julia tf.jl ../pride-and-prejudice.txt
+        working-directory: infinite-mirror
+
+      - name: bulletin-board
+        run: julia tf.jl ../pride-and-prejudice.txt
+        working-directory: bulletin-board
+
+      - name: closed-maps
+        run: julia tf.jl ../pride-and-prejudice.txt
+        working-directory: closed-maps
+
+      - name: golf
+        run: julia --project=@. tf.jl ../pride-and-prejudice.txt
+        working-directory: golf
+
+      - name: golf (tf-b)
+        run: julia --project=@. tf-b.jl ../pride-and-prejudice.txt
+        working-directory: golf
+
+      - name: aspects (tf.jl)
+        run: julia tf.jl ../pride-and-prejudice.txt
+        working-directory: aspects
+
+      - name: aspects (tf-b.jl)
+        run: julia tf-b.jl ../pride-and-prejudice.txt
+        working-directory: aspects
+
+      - name: aspects (tf-x.jl)
+        run: JULIA_LOAD_PATH="$JULIA_LOAD_PATH:$(pwd)" julia tf-x.jl ../pride-and-prejudice.txt
+        working-directory: aspects
+
+      - name: data-spaces (tasks)
+        run: julia tf.jl ../pride-and-prejudice.txt
+        working-directory: data-spaces
+
+      - name: data-spaces (threads)
+        run: julia --threads 4 tf-t.jl ../pride-and-prejudice.txt
+        working-directory: data-spaces
