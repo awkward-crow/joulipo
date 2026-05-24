@@ -91,8 +91,6 @@ event_manager[:subscribe](:valid_word, word_counts_obj[:increment_count])
 event_manager[:subscribe](:print, word_counts_obj[:print_counts])
 
 
-# ARG = ["../pride-and-prejudice.txt"]
-
 event_manager[:publish]((:load, ARGS[1]))
 event_manager[:publish]((:start, false))
 event_manager[:publish]((:print, false))

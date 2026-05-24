@@ -1,7 +1,5 @@
-# bulletin board
+# bulletin-board
 
-## use prototypes rather than classes
+An event-driven style using a shared mutable dictionary as a bulletin board. Functions communicate by reading from and writing to named slots in a shared `Dict` rather than passing arguments directly.
 
-see dir. 'closed-maps'
-
-### end
+See `closed-maps` for a related style using prototype-based objects.
