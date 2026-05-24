@@ -1,4 +1,4 @@
-#! /usr/bin/env julia
+#! /usr/bin/env -S julia --project=@.
 
 # golf/tf-b.jl
 
